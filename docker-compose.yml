@@ -1,0 +1,96 @@
+name: ai-supply-chain
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: asc-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-change-me-root}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-ai_supply_chain}
+      MYSQL_USER: ${MYSQL_USER:-supply_chain_app}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-change-me}
+      MYSQL_READONLY_USER: ${MYSQL_READONLY_USER:-supply_chain_ai_ro}
+      MYSQL_READONLY_PASSWORD: ${MYSQL_READONLY_PASSWORD:-change-me-ro}
+    ports:
+      - "${MYSQL_PORT:-3307}:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d:ro
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-change-me-root}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+
+  redis:
+    image: redis:7-alpine
+    container_name: asc-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: asc-backend
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: mysql+pymysql://${MYSQL_USER:-supply_chain_app}:${MYSQL_PASSWORD:-change-me}@mysql:3306/${MYSQL_DATABASE:-ai_supply_chain}
+      READONLY_DATABASE_URL: mysql+pymysql://${MYSQL_READONLY_USER:-supply_chain_ai_ro}:${MYSQL_READONLY_PASSWORD:-change-me-ro}@mysql:3306/${MYSQL_DATABASE:-ai_supply_chain}
+      REDIS_URL: redis://redis:6379/0
+      # /app stands in for "repo root" inside this container — knowledge_base/,
+      # data/, and ml/ are mounted directly under it below, mirroring the
+      # host's repo layout so relative paths (MODEL_PATH=ml/artifacts,
+      # VECTOR_DB_PATH=knowledge_base/chroma_db) resolve identically to local
+      # dev. See app/core/config.py's `project_root` and docs/decisions.md.
+      PROJECT_ROOT: /app
+    ports:
+      - "${BACKEND_PORT:-8001}:8000"
+    volumes:
+      - ./backend:/app
+      - ./ml:/app/ml
+      - ./knowledge_base:/app/knowledge_base
+      - ./data:/app/data
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: >
+      sh -c "alembic upgrade head &&
+             uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --reload-dir /app/app"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: asc-frontend
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:${BACKEND_PORT:-8001}/api/v1
+    ports:
+      - "${FRONTEND_PORT:-3001}:3001"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      - backend
+    command: npm run dev
+
+volumes:
+  mysql-data:
+  redis-data:

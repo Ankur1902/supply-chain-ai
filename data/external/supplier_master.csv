@@ -1,0 +1,73 @@
+supplier_code,supplier_name,supplier_region,supplier_tier,product_category,historical_lead_time_days,capacity_score,quality_score,reliability_score,cost_score,risk_score,is_synthetic
+SUP-0001,Granite Distribution,Southern Africa,standard,Baseball & Softball,4.79,87.22,83.47,49.9,93.66,46.86,True
+SUP-0002,Anchor Distribution,Western Europe,standard,Baseball & Softball,2.46,64.77,67.8,93.19,75.41,50.25,True
+SUP-0003,Horizon Logistics,South America,preferred,Baseball & Softball,3.2,70.5,53.06,88.04,74.74,46.69,True
+SUP-0004,Lighthouse Supply Co.,South America,preferred,Baseball & Softball,8.78,89.12,87.36,55.12,65.67,7.41,True
+SUP-0005,Granite Sourcing Partners,West of USA,preferred,Basketball,6.62,80.96,96.44,61.94,60.38,30.83,True
+SUP-0006,Frontier Logistics,South Asia,preferred,Basketball,2.47,66.16,60.89,79.83,64.04,50.8,True
+SUP-0007,Meridian Trading Group,Southern Africa,standard,Basketball,3.84,85.77,88.63,65.15,55.86,42.54,True
+SUP-0008,Crestline Logistics,Northern Europe,strategic,Basketball,3.0,40.4,87.77,79.57,78.78,47.94,True
+SUP-0009,Ironbridge Logistics,Central America,preferred,Cameras,5.77,47.69,55.5,79.76,65.91,36.09,True
+SUP-0010,Granite Distribution,Caribbean,standard,Cameras,6.26,70.45,76.84,60.81,41.69,29.02,True
+SUP-0011,Crestline Distribution,Central America,preferred,Cameras,4.56,86.94,61.23,48.03,55.48,21.15,True
+SUP-0012,Sterling Supply Co.,Eastern Europe,standard,Cameras,5.68,83.11,81.89,66.13,84.77,14.18,True
+SUP-0013,Atlas Sourcing Partners,Southern Europe,strategic,Camping & Hiking,2.18,79.73,72.17,53.39,67.56,13.38,True
+SUP-0014,Cascade Logistics,East Africa,standard,Camping & Hiking,4.85,60.96,64.47,77.77,59.9,9.82,True
+SUP-0015,Granite Distribution,US Center,strategic,Camping & Hiking,8.71,89.97,83.59,58.83,93.3,47.83,True
+SUP-0016,Vanguard Supply Co.,Eastern Asia,standard,Camping & Hiking,4.87,54.97,54.63,91.94,65.07,16.13,True
+SUP-0017,Cascade Distribution,US Center,preferred,Cardio Equipment,5.84,49.72,91.12,84.44,79.57,28.77,True
+SUP-0018,Sterling Sourcing Partners,Canada,standard,Cardio Equipment,5.88,75.74,54.05,66.62,42.29,32.17,True
+SUP-0019,Frontier Supply Co.,West Africa,preferred,Cardio Equipment,2.58,45.69,78.21,53.87,90.88,36.96,True
+SUP-0020,Beacon Trading Group,Southeast Asia,preferred,Cardio Equipment,5.93,41.25,96.01,70.08,83.05,9.55,True
+SUP-0021,Granite Supply Co.,Northern Europe,preferred,Cleats,5.18,91.58,77.44,69.62,54.68,23.24,True
+SUP-0022,Fieldstone Distribution,Southern Europe,standard,Cleats,4.79,41.19,89.66,91.6,47.71,35.47,True
+SUP-0023,Horizon Trading Group,South America,strategic,Cleats,6.54,55.47,81.65,82.8,82.28,10.93,True
+SUP-0024,Harbor Trading Group,East of USA,standard,Cleats,3.23,42.06,76.63,64.29,85.64,49.45,True
+SUP-0025,Vanguard Distribution,Northern Europe,preferred,Consumer Electronics,8.65,56.0,74.72,58.31,91.48,14.05,True
+SUP-0026,Granite Distribution,East Africa,strategic,Consumer Electronics,4.76,94.58,92.8,83.93,88.99,54.14,True
+SUP-0027,Crestline Logistics,Southern Europe,standard,Consumer Electronics,3.87,82.46,81.76,64.43,45.2,46.07,True
+SUP-0028,Horizon Sourcing Partners,Southern Europe,preferred,Consumer Electronics,8.53,53.25,55.89,88.22,48.43,14.86,True
+SUP-0029,Pinnacle Trading Group,Eastern Europe,standard,Fitness Accessories,8.06,50.8,64.9,85.43,93.45,32.54,True
+SUP-0030,Ironbridge Sourcing Partners,Oceania,strategic,Fitness Accessories,1.6,52.63,56.33,80.24,46.7,32.85,True
+SUP-0031,Redwood Trading Group,Western Europe,standard,Fitness Accessories,5.86,50.99,88.6,82.2,80.64,12.21,True
+SUP-0032,Cascade Logistics,Canada,strategic,Fitness Accessories,8.46,61.87,64.45,70.41,76.46,57.56,True
+SUP-0033,Windward Logistics,Canada,preferred,GPS Devices,8.44,41.37,76.65,77.97,45.82,12.72,True
+SUP-0034,Ironbridge Supply Co.,Eastern Asia,preferred,GPS Devices,8.75,72.78,94.79,86.83,65.71,48.16,True
+SUP-0035,Redwood Logistics,South Asia,strategic,GPS Devices,2.32,85.62,88.25,57.1,69.19,38.33,True
+SUP-0036,Harbor Sourcing Partners,Northern Europe,standard,GPS Devices,6.02,62.69,67.96,67.15,75.86,52.71,True
+SUP-0037,Anchor Distribution,Eastern Asia,preferred,Golf Bags & Carts,3.36,53.02,85.81,87.46,45.79,8.66,True
+SUP-0038,Northgate Trading Group,Eastern Asia,standard,Golf Bags & Carts,2.6,85.36,64.9,52.48,90.65,14.1,True
+SUP-0039,Harbor Sourcing Partners,West Africa,preferred,Golf Bags & Carts,2.65,46.35,51.02,47.88,49.61,7.94,True
+SUP-0040,Atlas Supply Co.,Eastern Asia,standard,Golf Bags & Carts,6.61,61.65,65.26,71.24,88.13,51.81,True
+SUP-0041,Beacon Distribution,West of USA,strategic,Golf Shoes,2.86,53.02,61.97,74.7,62.89,7.71,True
+SUP-0042,Anchor Sourcing Partners,Eastern Europe,preferred,Golf Shoes,5.43,45.59,90.01,47.7,90.87,10.45,True
+SUP-0043,Atlas Supply Co.,Western Europe,standard,Golf Shoes,8.27,93.88,88.5,85.53,75.34,47.84,True
+SUP-0044,Cascade Trading Group,Southern Africa,strategic,Golf Shoes,5.52,68.28,91.16,69.07,61.18,40.18,True
+SUP-0045,Frontier Trading Group,US Center,preferred,Hunting & Shooting,2.55,66.28,70.01,57.09,60.21,25.15,True
+SUP-0046,Granite Supply Co.,East of USA,preferred,Hunting & Shooting,4.35,77.72,64.25,94.34,90.4,31.45,True
+SUP-0047,Harbor Trading Group,Eastern Asia,preferred,Hunting & Shooting,5.52,86.67,81.32,86.83,69.3,39.81,True
+SUP-0048,Sterling Logistics,Northern Europe,preferred,Hunting & Shooting,7.01,51.13,83.35,89.76,47.27,38.79,True
+SUP-0049,Vanguard Sourcing Partners,US Center,strategic,Kids' Golf Clubs,6.94,44.65,94.93,52.15,92.74,49.05,True
+SUP-0050,Granite Distribution,North Africa,standard,Kids' Golf Clubs,7.37,83.73,95.41,58.18,72.45,10.23,True
+SUP-0051,Lighthouse Logistics,East of USA,standard,Kids' Golf Clubs,2.78,71.07,77.48,69.23,68.74,47.02,True
+SUP-0052,Redwood Distribution,West Africa,standard,Kids' Golf Clubs,5.19,72.98,94.7,51.23,46.44,9.82,True
+SUP-0053,Windward Sourcing Partners,Eastern Asia,standard,Men's Footwear,4.64,82.59,82.22,62.35,89.41,46.94,True
+SUP-0054,Frontier Logistics,US Center,preferred,Men's Footwear,4.23,57.29,57.57,52.68,91.49,29.08,True
+SUP-0055,Horizon Distribution,West Africa,preferred,Men's Footwear,6.97,70.41,94.93,85.58,66.37,25.7,True
+SUP-0056,Cascade Logistics,US Center,standard,Men's Footwear,6.88,92.32,55.69,89.23,75.04,11.71,True
+SUP-0057,Summit Trading Group,Southern Europe,standard,Soccer,6.65,40.68,71.81,87.92,56.24,30.22,True
+SUP-0058,Redwood Trading Group,Eastern Asia,preferred,Soccer,3.76,90.51,87.5,50.75,94.84,53.36,True
+SUP-0059,Vanguard Logistics,South Asia,preferred,Soccer,7.78,45.85,97.96,79.62,75.76,9.97,True
+SUP-0060,Northgate Sourcing Partners,Northern Europe,standard,Soccer,1.72,53.25,56.87,85.39,50.9,55.09,True
+SUP-0061,Lighthouse Sourcing Partners,South America,standard,Strength Training,1.77,40.3,52.48,76.51,84.08,18.12,True
+SUP-0062,Redwood Trading Group,Southern Europe,standard,Strength Training,1.93,84.05,94.53,85.15,78.4,51.09,True
+SUP-0063,Anchor Trading Group,Canada,strategic,Strength Training,3.01,46.87,74.22,83.75,74.65,51.81,True
+SUP-0064,Granite Distribution,Eastern Asia,preferred,Strength Training,7.01,50.62,63.0,81.92,93.91,38.63,True
+SUP-0065,Beacon Sourcing Partners,Central America,strategic,Water Sports,6.12,42.33,92.44,81.9,49.52,10.04,True
+SUP-0066,Anchor Logistics,Eastern Asia,preferred,Water Sports,8.85,65.22,87.64,78.09,71.48,12.98,True
+SUP-0067,Horizon Trading Group,West of USA,standard,Water Sports,3.76,71.79,83.59,78.76,91.73,13.16,True
+SUP-0068,Crestline Supply Co.,Eastern Europe,standard,Water Sports,4.53,66.08,55.72,51.97,55.29,21.76,True
+SUP-0069,Cascade Supply Co.,Southern Europe,preferred,Women's Apparel,6.08,74.9,69.77,66.26,51.97,37.36,True
+SUP-0070,Redwood Supply Co.,Northern Europe,preferred,Women's Apparel,1.77,63.01,72.76,56.73,71.49,36.12,True
+SUP-0071,Fieldstone Sourcing Partners,Canada,standard,Women's Apparel,6.36,75.88,65.18,85.95,70.2,28.73,True
+SUP-0072,Windward Distribution,Southern Africa,standard,Women's Apparel,4.2,68.2,85.36,91.09,90.66,32.7,True

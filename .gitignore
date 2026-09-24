@@ -1,0 +1,58 @@
+# --- Python / Backend ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+
+# --- Node / Frontend ---
+node_modules/
+.next/
+out/
+.turbo/
+frontend/.env*.local
+frontend/coverage/
+playwright-report/
+test-results/
+
+# --- Env / secrets ---
+.env
+.env.local
+!.env.example
+*.pem
+
+# --- Data (large / generated) ---
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/sample/*.csv.gz
+!data/sample/.gitkeep
+
+# --- ML artifacts (large binaries) ---
+ml/artifacts/*
+!ml/artifacts/.gitkeep
+*.joblib
+*.pkl
+*.xgb
+
+# --- Vector DB / Chroma persistence ---
+knowledge_base/chroma_db/
+backend/chroma_db/
+
+# --- MySQL / Redis local volumes ---
+docker/mysql-data/
+docker/redis-data/
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Alembic ---
+backend/alembic/*.sqlite3
