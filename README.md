@@ -35,6 +35,50 @@ ML Prediction, Estimated, Synthetic Demo Data, or AI-Generated** — because
 this project treats "don't fake it" as a hard requirement, not a nice-to-have.
 See [Anti-hallucination / data integrity](#anti-hallucination--data-integrity).
 
+## Screenshots
+
+Captured from the local demo, which runs on the 8,000-row **synthetic**
+sample dataset (see [Dataset](#dataset)), so all numbers are demo data.
+
+### Executive dashboard
+KPI cards with provenance badges (Source Data / ML Prediction / Estimated /
+Derived), delay-rate trend, risk distribution, and delay rate by shipping
+mode and destination region.
+
+![Executive dashboard](assets/sc_ai_1.png)
+
+### Shipment explorer
+Searchable, filterable, paginated view of all shipments with route,
+shipping mode, sales value, and ML risk level and score.
+
+![Shipment explorer](assets/sc_ai_2.png)
+
+### Supplier intelligence
+Supplier scorecards ranked by composite score, with tier, delay rate, lead
+time, and volume. Flagged as a synthetic demo enrichment layer.
+
+![Supplier intelligence](assets/sc_ai_3.png)
+
+### Alert center
+Deterministic, rule-based operational alerts with severity, a recommended
+action, and acknowledge / resolve workflow.
+
+![Alert center](assets/sc_ai_4.png)
+
+### Analytics: risk and root cause
+Ranked contributing factors from the deterministic variance-attribution
+engine (shipping mode, delivery window, region, supplier, product
+category). Reported as contributing factors, not proven causes.
+
+![Analytics: risk and root cause](assets/sc_ai_5.png)
+
+### AI copilot
+Chat interface with suggested questions. Answers come from tool calls
+against the real analytics and prediction code, not from free-form
+generation (requires an LLM API key; see [docs/ai-system.md](docs/ai-system.md)).
+
+![AI copilot](assets/sc_ai_6.png)
+
 ## Architecture
 
 ```
